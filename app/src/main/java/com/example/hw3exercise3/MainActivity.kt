@@ -57,6 +57,7 @@ class MainActivity : AppCompatActivity() {
 
             checkAnswer(true)
 
+//Disabling buttons after true button is clicked
             binding.trueButton.isEnabled = !(binding.trueButton.isEnabled)
             binding.falseButton.isEnabled = !(binding.falseButton.isEnabled)
 
@@ -71,6 +72,8 @@ class MainActivity : AppCompatActivity() {
 
             checkAnswer(false)
 
+
+//Disabling buttons after false button is clicked
             binding.falseButton.isEnabled = !(binding.falseButton.isEnabled)
             binding.trueButton.isEnabled = !(binding.trueButton.isEnabled)
 
@@ -96,8 +99,8 @@ class MainActivity : AppCompatActivity() {
 
             currentIndex = (currentIndex + 1) % questionBank.size
 
+//Re-enabling buttons when next button is clicked
             binding.falseButton.isEnabled = true
-
             binding.trueButton.isEnabled = true
 
             updateQuestion()
@@ -120,6 +123,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+//Re-configuring checkAnswer function like in the video
     private fun checkAnswer(userAnswer: Boolean) {
 
         val correctAnswer = questionBank[currentIndex].answer
