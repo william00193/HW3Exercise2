@@ -21,7 +21,7 @@ private const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
 
 
-    //creating a variable for the binding
+//creating a variable for the binding
     private lateinit var binding: ActivityMainBinding
 
 
@@ -51,8 +51,8 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        //My on onclick listener for the true button
-        // and coding it with 'Correct!'
+//My on onclick listener for the true button
+// and coding it with 'Correct!'
         binding.trueButton.setOnClickListener {
 
             checkAnswer(true)
@@ -66,8 +66,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        //My on onclick listener for the false button
-        // and coding it with 'False!'
+//My on onclick listener for the false button // and coding it with 'False!'
         binding.falseButton.setOnClickListener {
 
             checkAnswer(false)
@@ -81,8 +80,8 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        //Finding questionTextView through binding
-        //Moving to next and previous questions on click
+//Finding questionTextView through binding
+//Moving to next and previous questions on click
         binding.questionTextView.setOnClickListener {
             currentIndex = (currentIndex + 1) % questionBank.size
             updateQuestion()
